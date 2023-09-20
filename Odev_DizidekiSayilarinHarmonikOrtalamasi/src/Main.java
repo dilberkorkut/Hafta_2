@@ -9,7 +9,7 @@ public class Main {
             harmonicSum += 1.0 / i; // dizideki elemanlarin terslerinin toplami
         }
 
-        return list.length / harmonicSum; //formul harmonik ortalama
+        return list.length / harmonicSum; //formul
     }
 
     public static void main(String[] args) {
