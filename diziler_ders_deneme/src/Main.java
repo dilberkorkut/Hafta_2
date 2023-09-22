@@ -1,16 +1,34 @@
+
+import java.util.Arrays;
+
+// Dizideki Elemanların Frekansı
+
 public class Main {
-    public static void main(String[] args) {
-        public double pow(int base, int exponent){
-            if(exponent<0){
-                int tempExponent=-exponent;
-                return 1/(base * pow(base, (tempExponent-1)));
+
+    public static void frequencyChecker(int[] array) {
+        System.out.println("Array: " + Arrays.toString(array));
+
+        Arrays.sort(array);
+
+        int i = 0;
+
+        while (i < array.length) {
+            int counter = 1;
+
+            while (i < array.length - 1 && array[i] == array[i + 1]) {
+                counter++;
+                i++;
             }
-            else if(exponent>0){
-                return base * pow(base, (exponent-1));
-            }
-            else{
-                return 1;
-            }
+
+            System.out.println("Frequency of " + array[i] + ": " + counter);
+
+            i++;
         }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 20, 10, 10, 20, 5, 20};
+
+        frequencyChecker(numbers);
     }
 }
